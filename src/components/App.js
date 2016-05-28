@@ -1,17 +1,18 @@
 
 import React, { Component, PropTypes } from 'react';
+/*eslint-disable no-console */
 
 class App extends Component {
 
   static propTypes = {
     className: PropTypes.string,
     msg: PropTypes.string.isRequired
-  };
+  }
 
   constructor(props) {
     super(props);
 
-    this.state = { 'name': this.props.msg }
+    this.state = { 'name': this.props.msg };
     this.handleClick = this.handleClick.bind(null);
   }
 
