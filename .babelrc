@@ -5,6 +5,7 @@
       "plugins": [
         ["transform-object-rest-spread"],
         ["transform-react-display-name"],
+        ["transform-class-properties"],
         ["react-transform", {
           "transforms": [{
             "transform": "react-transform-hmr",
@@ -20,6 +21,7 @@
     "production": {
       "plugins": [
         ["transform-object-rest-spread"],
+        ["transform-class-properties"],
         ["transform-react-display-name"]
       ]
     }
