@@ -10,15 +10,17 @@ class Profile extends Component {
   }
 
   render() {
-    let data = this.props.data;
+    let { cell, gender, email, location, login } = this.props.data;
+    let { city, state } = location;
+    let { username } = login;
     return (
       <div>
-        <p>{data.login.username}</p>
-        <p>Cell: {data.cell || 'No listed number'}</p>
-        <p>Gender: {data.gender || 'No listed gender'}</p>
-        <p>Email: {data.email || 'No listed email'}</p>
-        <p>Lives in: {data.location.city} | {data.location.state} </p>
-        <img src={data.picture.thumbnail} alt=""/>
+        <p>{username}</p>
+        <p>Cell: {cell || 'No listed number'}</p>
+        <p>Gender: {gender || 'No listed gender'}</p>
+        <p>Email: {email || 'No listed email'}</p>
+        <p>Lives in: {city} | {state} </p>
+        <img src={this.props.data.picture.thumbnail} alt=""/>
         <hr/>
       </div>
     );
